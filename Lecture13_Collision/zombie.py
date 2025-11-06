@@ -47,6 +47,8 @@ class Zombie:
         elif self.x < 800:
             self.dir = 1
         self.x = clamp(800, self.x, 1600)
+        if self.size == 50:
+            game_world.remove_object(self)
         pass
 
 
