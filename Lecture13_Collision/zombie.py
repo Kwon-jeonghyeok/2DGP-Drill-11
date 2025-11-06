@@ -37,7 +37,7 @@ class Zombie:
 
 
     def get_bb(self):
-        return self.x - 100, self.y - 100, self.x + 100, self.y + 100
+        return self.x - (self.size / 2), self.y - (self.size / 2), self.x + (self.size / 2), self.y + (self.size / 2)
 
     def update(self):
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % FRAMES_PER_ACTION
@@ -63,7 +63,7 @@ class Zombie:
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
             self.size = self.size / 2
-            self.y = 100
+            self.y = self.y - (self.size / 2)
 
 
             pass
