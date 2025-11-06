@@ -51,7 +51,6 @@ class Zombie:
             game_world.remove_object(self)
         pass
 
-
     def draw(self):
         if self.dir < 0:
             Zombie.images['Walk'][int(self.frame)].composite_draw(0, 'h', self.x, self.y, self.size, self.size)
@@ -66,6 +65,5 @@ class Zombie:
         if group == 'zombie:ball':
             self.size = self.size / 2
             self.y = self.y - (self.size / 2)
-
 
             pass
