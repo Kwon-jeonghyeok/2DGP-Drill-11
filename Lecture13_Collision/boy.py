@@ -187,5 +187,7 @@ class Boy:
     def handle_collision(self, group, other):
         if group == 'boy:ball':
             self.ball_count += 1
+        if group == 'boy:zombie':
+            game_framework.quit()
         # 충돌한 공 제거는 ball.py에서 자기가 처리 (중요)
 
